@@ -25,9 +25,9 @@ function runMatter() {
   // create engine
   var engine = Engine.create();
 
-  engine.gravity.y = 0;
-  engine.gravity.x = 0;
-  engine.gravity.scale = 0.1;
+  engine.world.gravity.y = 0;
+  engine.world.gravity.x = 0;
+  engine.world.gravity.scale = 0.1;
 
   // create renderer
   var render = Render.create({
@@ -49,7 +49,7 @@ function runMatter() {
   // Render.run(render);
 
   // create demo scene
-  var world = engine;
+  var world = engine.world;
   world.gravity.scale = 0;
 
   // create a body with an attractor
